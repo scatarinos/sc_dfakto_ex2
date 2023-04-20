@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+
+    <div t-name="sc_dfakto_ex2.timesheet_grid_timer_header_template" t-inherit="timesheet_grid.timer_header" >
+        <xpath expr="//t[@t-if='_timerIsRunning']" position="before">
+            <button t-ref="autofillButton" class="btn btn-primary" t-on-click="autofill"> Autofill</button>|
+        </xpath>
+    </div>
+
+</templates>
