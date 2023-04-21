@@ -17,7 +17,7 @@
     'version': '1.0',
     'sequence': -100,
 
-    'depends': ['timesheet_grid'],
+    'depends': ['timesheet_grid', 'web_grid'],
 
     'data': [
 

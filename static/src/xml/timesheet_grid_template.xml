@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <t t-name="timesheet_grid.GridRenderer" t-inherit="web_grid.GridRenderer" t-inherit-mode="extension" owl="1">
+        <xpath expr="//t[@t-if='showTimer']" position="replace">
+            <t t-if="showTimer">
+                <TimerHeaderComponent projectId="stateTimer.projectId" taskId="stateTimer.taskId"
+                addTimeMode="stateTimer.addTimeMode" stepTimer="props.stepTimer" projectWarning="stateTimer.projectWarning"
+                timer="stateTimer.startSeconds" description="stateTimer.description"
+                timerRunning="stateTimer.timerRunning" timerReadOnly="stateTimer.readOnly"
+                projectName="stateTimer.projectName" taskName="stateTimer.taskName"
+                onTimerStarted.bind="_onTimerStarted" onTimerStopped.bind="_stop_timer"
+                onTimerUnlink.bind="_onTimerUnlink" onTimerEditProject.bind="_onSetProject"
+                onTimerEditTask.bind="_onSetTask" onNewTimerValue.bind="_onNewTimerValue"
+                onAutofill.bind="_onAutofill"
+                onNewDescription.bind="_onNewDescription" bus="_bus"/>
+            </t>
+        </xpath>
+    </t>
+</templates>
